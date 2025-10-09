@@ -191,7 +191,7 @@ body{
  
 body{
     background-color: blue;
-    background-image: url(sunny-pc.jpeg);
+    background-image: url(sunny3-pc.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -214,18 +214,39 @@ body{
 }
 .current_weather{
     width:100%;
-    height: 40%;
+    height: 60%;
     border-radius: 50px;
     margin-top: 5rem;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(8px);
+    font-family: Roboto;
+    display:flex ;
+    flex-direction: column;
+    align-items:center ;
+    gap:1.4rem;
+    padding: 2em 1em;
 }
 .hourly_forecast{
-    height:30%;
+    height:fit-content;
     margin-top: 2em;
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(8px);
+    display: flex;
+    gap:2em;
+    padding:1em 2.3em;
+    overflow-x: auto;
+}
+.hourly_forecast::-webkit-scrollbar{
+    display: none;
+}
+.current_weather_icon{
+    width:7em;
+   
+}
+.location-tag{
+    font-weight: 600;
+
 }
 
 .extras{
@@ -243,6 +264,55 @@ body{
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(8px);
+}
+
+.extra-content{
+    width:100%;
+    height:100%;
+    padding:3em 2em;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+     display: grid;
+     grid-template-columns: repeat(3, 1fr); 
+     gap: 1em;
+}
+
+.hour-data-container{
+    height:100%;
+    font-family: Roboto ;
+}
+.hour_data_icon{
+  display: block;
+}
+
+.location-tag{
+    font-size:1.5em;
+}
+.temp{
+    font-size: 4em;
+    font-weight: 900;
+    
+
+}
+
+.condition-text{
+    font-size:0.8em;
+}
+.extras_icons{
+    width:3rem;
+   
+}
+.extras__con{
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    height:fit-content;
+    vertical-align: center;
+    font-weight: 500;
+
 }
 
 

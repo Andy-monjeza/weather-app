@@ -13,13 +13,6 @@ async function renderWeather() {
       const temperature= document.createElement('span');
       const location= document.createElement('span');
 
-      const locationIcon = document.createElement("img");
-      locationIcon.src = "https://lucide.dev/icons/map-pin.svg";
-      locationIcon.alt = "Location";
-      locationIcon.width = 24;
-      locationIcon.height = 24;
-
-      
       img.src=data.current.condition.icon;
       current_container.appendChild(img);
       img.classList.add('current_weather_icon');
@@ -32,7 +25,7 @@ async function renderWeather() {
       condition_text.classList.add('condition-text');
 
 
-      const children=[img, location, temperature, condition_text];
+      const children=[ location, img, temperature, condition_text];
 
       children.forEach((child)=>{
         current_container.appendChild(child);
