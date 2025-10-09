@@ -2,7 +2,7 @@ import { fetchWeather } from "./weather-app.js";
 
 const current_container=document.querySelector('.current_weather');
 const hourForecast_container=document.querySelector('.hourly_forecast')
-const extras_container= document.querySelector('.extras');
+const extras_container= document.querySelector('.extra-content');
 
 async function renderWeather() {
     try{
@@ -64,54 +64,56 @@ async function renderWeather() {
       })
      
  
-    /*
+    
    const extras_data = [
   {
     name: "Wind Speed",
-    icon: "https://cdn-icons-png.flaticon.com/512/5536/5536048.png", // wind speed icon
+    icon: "wind.svg",
     value: data.current.wind_kph + " km/h",
   },
   {
     name: "Humidity",
-    icon: "https://cdn-icons-png.flaticon.com/512/4148/4148460.png", // droplet/humidity icon
+    icon: "humidity.svg",
     value: data.current.humidity + " %",
   },
   {
     name: "Wind Direction",
-    icon: "https://cdn-icons-png.flaticon.com/512/54/54759.png", // compass arrow
+    icon: "wind_dir.svg", 
     value: data.current.wind_dir,
   },
   {
     name: "UV Index",
-    icon: "https://cdn-icons-png.flaticon.com/512/979/979585.png", // sun with UV rays
+    icon: "uv-index.svg",
     value: data.current.uv,
   },
   {
     name: "Feels Like",
-    icon: "https://cdn-icons-png.flaticon.com/512/3075/3075977.png", // thermometer person
+    icon: "feelsLike.svg",
     value: data.current.feelslike_c + "°C",
   },
   {
     name: "Cloudiness",
-    icon: "https://cdn-icons-png.flaticon.com/512/414/414927.png", // cloud cover
+    icon: "cloud.svg",
     value: data.current.cloud + " %",
   },
   {
     name: "Visibility",
-    icon: "https://cdn-icons-png.flaticon.com/512/4005/4005801.png", // eye/visibility
+    icon: "visibility.svg",
     value: data.current.vis_km + " km",
   },
   {
     name: "Pressure",
-    icon: "https://cdn-icons-png.flaticon.com/512/4835/4835972.png", // barometer
+    icon: "pressure.svg",
     value: data.current.pressure_mb + " mb",
   },
 ];
-*/
+
    extras_data.forEach(data=>{
      extras_container.innerHTML+=`
+     <div class="extras__con">
      <img src=${data.icon} class="extras_icons">
      <span class="extras_text">${data.value}</span>
+     </div>
      `
 
 
